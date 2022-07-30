@@ -34,7 +34,7 @@ body{
   font-family: 'Roboto', sans-serif;
   background-color: var(--color-light);
   color: var(--color-dark);
-  overflow-y: hidden;
+  overflow-x: hidden;
  }
  .container{
   width: 80%;
@@ -71,6 +71,17 @@ body{
  .text-muted{
   color: var(--color-gray);
  }
+/* Main css */
+main{
+  top:5.5rem;
+  position: relative;
+}
+main .container{
+  display: grid;
+  grid-template-columns: 20vw auto 20vw;
+  gap:2rem;
+  position: relative;
+}
 
  /*====== Navbar css===== */
  nav{
@@ -114,4 +125,66 @@ nav .create{
 }
 nav .create .btn{
   margin-right: 1.5rem;
+}
+main .container .left{
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-left);
+}
+main .container .left .profile-user{
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  display: flex;
+  align-items: center;
+  width: 100% ;
+  gap:1rem;
+}
+.sidebar{
+  margin-top: 1rem;
+  background-color: var(--color-white);;
+  border-radius: var(--card-border-radius);
+}
+.sidebar .menu-item{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+  height:4rem;
+  transition: var(--transition);
+  position: relative;
+}
+.sidebar .menu-item:hover {
+  background-color: var(--color-light);
+}
+.sidebar .menu-item i{
+  font-size: 1.4rem;
+  margin-left:1.4rem;
+  position: relative;
+  color: var(--color-gray);
+}
+.sidebar .menu-item i .notification-count{
+  font-size: 1rem;
+  width: 30px;
+  background-color: var(--color-danger);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+  position: absolute;
+  top:-0.2rem;
+  right:-0.3rem;
+}
+.sidebar .menu-item i .notification-count{
+  font-size: 1rem;
+  width: fit-content;
+  background-color: var(--color-danger);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+  position: absolute;
+  top:-0.2rem;
+  right:-0.3rem;
+}
+.left .btn{
+  width: 100%;
+  margin-top: 1rem;
+  padding:1rem 0;
+  text-align: center;
 }
